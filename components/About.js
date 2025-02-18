@@ -11,7 +11,7 @@ const About = () => {
           badgeText="About"
           badgeBgColor="bg-blue-500"
           badgeTextColor="text-white"
-          title="Производство полиэтиленовой упаковки"
+          title="О компании"
         />
 
         <div className="grid lg:grid-cols-2 gap-6">
