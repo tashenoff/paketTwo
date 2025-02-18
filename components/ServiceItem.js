@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image'; // Импортируйте Image из next/image
 
 const ServiceItem = ({ title, banner, description, slug }) => {
