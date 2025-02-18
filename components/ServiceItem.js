@@ -1,6 +1,6 @@
 import Image from 'next/image'; // Импортируйте Image из next/image
 
-const ServiceItem = ({ title, banner, description, slug }) => {
+const ServiceItem = ({ title, banner }) => {
   return (
     <div className="card bg-base-100 ">
      
