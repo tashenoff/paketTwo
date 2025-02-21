@@ -1,18 +1,51 @@
+import { useState } from 'react';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 
 const Contacts = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
   return (
     <Layout>
-      {/* Баннер с заголовком "Контакты" */}
       <Banner bgimg='/img/deal.jpg' className="h-[300px]" title="Контакты"></Banner>
 
-      {/* Контейнер с формой и картой */}
       <div className="py-20 container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Форма отправки */}
         <div>
           <h2 className="text-4xl font-bold mb-8">Свяжитесь с нами</h2>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-lg font-medium" htmlFor="name">Имя</label>
               <input
@@ -21,6 +54,8 @@ const Contacts = () => {
                 name="name"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Ваше имя"
+                value={formData.name}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -31,6 +66,8 @@ const Contacts = () => {
                 name="email"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Ваш email"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -40,18 +77,22 @@ const Contacts = () => {
                 name="message"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Ваше сообщение"
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
             </div>
             <button
               type="submit"
               className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
+              disabled={status === 'loading'}
             >
-              Отправить
+              {status === 'loading' ? 'Отправка...' : 'Отправить'}
             </button>
+            {status === 'success' && <p className="text-green-500 mt-2">Сообщение отправлено!</p>}
+            {status === 'error' && <p className="text-red-500 mt-2">Ошибка отправки</p>}
           </form>
         </div>
 
-        {/* Карта */}
         <div className="h-96 w-full">
           <iframe
             className="w-full h-full rounded-md shadow-md"
