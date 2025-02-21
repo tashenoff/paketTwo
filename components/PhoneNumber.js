@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function PhoneNumber() {
-    const phoneNumber = "8(700)961-96-63"; // Определяем переменную с номером телефона
+    const phoneNumber = "8(717)253-13-30"; // Определяем переменную с номером телефона
 
     return (
         <div className="flex items-center">

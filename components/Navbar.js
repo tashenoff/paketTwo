@@ -14,7 +14,7 @@ function Navbar() {
     ];
 
     const phoneNumbers = [
-        { number: '+7 (778)-980-11-20' }
+        { number: '8 (7172)53-13-30' }
     ];
 
     return (
