@@ -32,6 +32,7 @@ const Contacts = () => {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
       } else {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
         setStatus('error');
       }
     } catch (error) {
