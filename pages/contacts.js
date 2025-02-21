@@ -26,6 +26,7 @@ const Contacts = () => {
         body: JSON.stringify(formData),
       });
 
+       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const data = await response.json();
       if (response.ok) {
         setStatus('success');
@@ -34,6 +35,7 @@ const Contacts = () => {
         setStatus('error');
       }
     } catch (error) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       setStatus('error');
     }
   };
