@@ -17,9 +17,7 @@ const ServicesCarousel = ({ services }) => {
     <div className="container mx-auto my-10">
       {/* Используем SectionTitle для заголовка секции */}
       <SectionTitle
-                        badgeText="Services"
-                        badgeBgColor="bg-blue-500"
-                        badgeTextColor="text-white"
+                       
                      
                         title="Наши услуги"
                         
