@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     // Опции письма
     const mailOptions = {
       from: email,
-      to: 'marat.esline@gmail.com',
+      to: 'polimer_astana@mail.ru',
       subject: `Новое сообщение с сайта от ${name}`,
       text: `Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`,
     };

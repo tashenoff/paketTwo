@@ -95,7 +95,7 @@ const Contacts = () => {
           <h3 className="text-2xl font-bold">Наши контакты</h3>
           <p><strong>Адрес:</strong> адрес: г.Астана, ул. Аксай 11</p>
           <p><strong>Телефон:</strong> <br/> 8 (717) 253-13-30 <br/> +7 778 980-11-20</p>
-          <p><strong>Данные компании:</strong> <br/> ТОО "Полимер-Пласт" <br/> +7 (778) 980-11-20</p>
+          <p><strong>Данные компании:</strong> <br/> ТОО &quot;Полимер-Пласт&quot; <br/> +7 (778) 980-11-20</p>
           <p><strong>Instagram:</strong> <a href="https://www.instagram.com/polimer_plast.kz/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">@polimer_plast.kz</a></p>
           <div className="h-48 w-full">
             <iframe
