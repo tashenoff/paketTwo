@@ -17,12 +17,11 @@ const Home = () => {
         className="h-[500px] w-full text-gray-600"
         title="Производство полиэтиленовой упаковки"
       >
-        <p className="py-5 text-white w-full">
-        Мы тщательно следим за каждым этапом производства. Чтобы гарантировать конечному потребителю его высочайшее качество
-
+        <p className="py-5 mb-5 text-white w-full">
+        Мы тщательно подбираем каждый товар и проверяем его лично. Чтобы гарантировать конечному потребителю его высочайшее качество
         </p>
         <a
-          href="https://wa.link/smkejb"
+          href="https://wa.me/79123456789"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-10 px-4 lg:w-1/2 w-full text-center py-3 bg-red-500  text-white rounded-full "

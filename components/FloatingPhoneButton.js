@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 function FloatingPhoneButton() {
-    const phoneNumber = "87789801120"; // Номер телефона для набора
+    const phoneNumber = "77789801120"; // Номер телефона для набора
 
     const handleClick = () => {
         window.location.href = `tel:${phoneNumber}`; // Переход к набору номера

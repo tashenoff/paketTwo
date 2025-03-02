@@ -10,7 +10,7 @@ const About = () => {
       <div className="py-20">
         <div className="container mx-auto">
 
-          <div className='grid grid-cols-2'>
+          <div className='grid lg:grid-cols-2 md:grid-cols-2 sm-grid-cols-2 gap-10'>
 
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/LCMoD1IRhRM?si=O-Eq8sx7DX3Ch8Ah" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -18,7 +18,7 @@ const About = () => {
 
 
 
-            <div className=''>
+            <div className='px-10'>
               <p>
                 История ТОО «Полимер-Пласт» началась в 1996 году. Как рассказывает директор предприятия Касенгалиев Кайрат Наушанович, идею открыть бизнес по производству пластиковой тары ему подсказали друзья. Идея, поддержанная единомышленниками, обрела форму: была собрана команда, арендовано помещение, приобретено оборудование. Вот так из простой идеи, подкинутой друзьями, вырос успешный бизнес, прошедший путь от скромных начинаний до тесного сотрудничества с крупными предприятиями.
                 В настоящее время ассортимент продукции ТОО «Полимер-Пласт» состоит из: термоусадочной пленки, пакетов для фасовки, пакетов с цветным имиджевым логотипом. Вся продукция фирмы сертифицирована. Обеспечивая гарантию качества на свою продукцию ТОО «Полимер-пласт» занимает постоянное и устойчивое место на рынке товаров.
@@ -28,7 +28,11 @@ const About = () => {
               </p>
             </div>
 
-            <SectionTitle
+          
+
+          </div>
+
+          <SectionTitle
               badgeText="Clients"
               badgeBgColor="bg-blue-500"
               badgeTextColor="text-white"
@@ -37,7 +41,7 @@ const About = () => {
 
             <BrandCarousel />
 
-          </div>
+            
         </div>
       </div>
     </Layout>
